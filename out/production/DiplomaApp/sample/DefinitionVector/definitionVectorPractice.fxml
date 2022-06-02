@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="752.0" style="-fx-background-color: #FB6B90;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DefinitionVector.DefinitionVectorPractice">
+    <children>
+        <AnchorPane layoutY="83.0" prefHeight="584.0" prefWidth="700.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <Button fx:id="toMenu_button" mnemonicParsing="false" prefHeight="52.0" prefWidth="751.0" style="-fx-background-color: #000000; -fx-background-radius: 0;" text="Головна" textFill="WHITE">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <TextField layoutX="548.0" layoutY="100.0" prefHeight="40.0" prefWidth="40.0" promptText="0" fx:id="xA_text">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+                <TextField fx:id="zA_text" layoutX="648.0" layoutY="100.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+                <TextField fx:id="yA_text" layoutX="598.0" layoutY="100.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+                <Label layoutX="22.0" layoutY="80.0" prefHeight="40.0" prefWidth="106.0" text="Оберіть дію:" underline="true">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Button fx:id="findCoordinates_button" layoutX="141.0" layoutY="80.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Знайти координати вектора" textFill="#fb6b90">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="isCollinear_button" layoutX="141.0" layoutY="183.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Перевірити, чи колінеарні вектори" textFill="#fb6b90">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="findLength_button" layoutX="141.0" layoutY="131.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Знайти довжину вектора" textFill="#fb6b90">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="solve_button" layoutX="225.0" layoutY="244.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #fb6b90; -fx-background-radius: 3;" text="Розв'язок" textFill="WHITE">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Label fx:id="solution_label" alignment="CENTER" layoutX="157.0" layoutY="312.0" prefHeight="230.0" prefWidth="451.0" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                    </font>
+                </Label>
+            <Label fx:id="pointA_label" layoutX="491.0" layoutY="97.0" prefHeight="46.0" prefWidth="61.0" text="А=(">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <TextField layoutX="548.0" layoutY="151.0" prefHeight="40.0" prefWidth="40.0" promptText="0" visible="false" fx:id="xB_text">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="zB_text" layoutX="648.0" layoutY="151.0" prefHeight="40.0" prefWidth="40.0" promptText="0" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="yB_text" layoutX="598.0" layoutY="151.0" prefHeight="40.0" prefWidth="40.0" promptText="0" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label fx:id="pointB_label" layoutX="491.0" layoutY="148.0" prefHeight="46.0" prefWidth="61.0" text="B=(">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="earB_lbl" layoutX="689.0" layoutY="148.0" prefHeight="46.0" prefWidth="18.0" text=")" visible="false">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <TextField layoutX="549.0" layoutY="100.0" prefHeight="40.0" prefWidth="40.0" promptText="0" visible="false" fx:id="xa_text">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="za_text" layoutX="649.0" layoutY="100.0" prefHeight="40.0" prefWidth="40.0" promptText="0" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="ya_text" layoutX="599.0" layoutY="100.0" prefHeight="40.0" prefWidth="40.0" promptText="0" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label fx:id="vectora_label" layoutX="495.0" layoutY="97.0" prefHeight="46.0" prefWidth="61.0" text="⃗a=(" visible="false">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="ear_a_lbl" layoutX="690.0" layoutY="97.0" prefHeight="46.0" prefWidth="18.0" text=")" visible="false">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <TextField layoutX="546.0" layoutY="151.0" prefHeight="40.0" prefWidth="40.0" promptText="0" fx:id="xb_text">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="zb_text" layoutX="646.0" layoutY="151.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="yb_text" layoutX="596.0" layoutY="151.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label fx:id="vectorb_label" layoutX="492.0" layoutY="148.0" prefHeight="46.0" prefWidth="61.0" text="⃗b=(">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="ear_b_lbl" layoutX="687.0" layoutY="148.0" prefHeight="46.0" prefWidth="18.0" text=")">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Label fx:id="earA_lbl" layoutX="689.0" layoutY="97.0" prefHeight="46.0" prefWidth="18.0" text=")">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <ImageView fitHeight="176.0" fitWidth="140.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/do_image.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="162.0" layoutY="16.0" prefHeight="58.0" prefWidth="428.0" text="Практика.Основні означення">
+            <font>
+                <Font name="System Bold" size="29.0" />
+            </font>
+        </Label>
+        <Label layoutX="313.0" layoutY="38.0" prefHeight="58.0" prefWidth="125.0" text="векторна алгебра" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="back_button" layoutX="606.0" layoutY="25.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #000000; -fx-background-radius: 3;" text="Повернутися" textFill="WHITE">
+            <font>
+                <Font size="17.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+        </Button>
+    </children>
+</AnchorPane>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="700.0" style="-fx-background-color: #FB6B90;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Menu.Menu">
+    <children>
+      <Label alignment="TOP_CENTER" contentDisplay="TOP" layoutX="121.0" layoutY="14.0" prefHeight="50.0" prefWidth="85.0" text="-cat" textAlignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS" size="40.0" />
+         </font>
+      </Label>
+        <AnchorPane layoutY="83.0" prefHeight="479.0" prefWidth="700.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Button fx:id="main_menu" mnemonicParsing="false" prefHeight="11.0" prefWidth="700.0" style="-fx-background-color: #000000; -fx-background-radius: 0;" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Semilight" size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="main_menu1" graphicTextGap="0.0" layoutX="20.0" layoutY="147.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="307.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8; -fx-border-color: #FB6B90; -fx-border-radius: 8;" text="Елементи лінійної алгебри" textFill="#fb6b90">
+               <font>
+                  <Font name="Segoe UI Semilight" size="21.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </Button>
+            <Button fx:id="determinant_button" layoutX="375.0" layoutY="124.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="255.0" style="-fx-background-color: #FB6B90; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-insets: 4;" text="Визначники" visible="false">
+               <font>
+                  <Font name="Segoe UI Semilight" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="matrix_button" layoutX="375.0" layoutY="204.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="255.0" style="-fx-background-color: #FB6B90; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-insets: 4;" text="Матриці" visible="false">
+               <font>
+                  <Font name="Segoe UI Semilight" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="linear_button" layoutX="375.0" layoutY="284.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="255.0" style="-fx-background-color: #FB6B90; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-insets: 4;" text="Системи ЛАР" visible="false">
+               <font>
+                  <Font name="Segoe UI Semilight" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="main_menu2" graphicTextGap="0.0" layoutX="20.0" layoutY="207.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="307.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8; -fx-border-color: #FB6B90; -fx-border-radius: 8;" text="Векторна алгебра" textFill="#fb6b90">
+               <font>
+                  <Font name="Segoe UI Semilight" size="21.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </Button>
+            <Button fx:id="definition_button" layoutX="375.0" layoutY="124.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="255.0" style="-fx-background-color: #FB6B90; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-insets: 4;" text="Основні означення" visible="false">
+               <font>
+                  <Font name="Segoe UI Semilight" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="operations_button" layoutX="375.0" layoutY="204.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="255.0" style="-fx-background-color: #FB6B90; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-insets: 4;" text="Операції над векторами" visible="false">
+               <font>
+                  <Font name="Segoe UI Semilight" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="product_button" layoutX="375.0" layoutY="284.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="255.0" style="-fx-background-color: #FB6B90; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-insets: 4;" text="Добутки векторів" visible="false">
+               <font>
+                  <Font name="Segoe UI Semilight" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="main_menu3" graphicTextGap="0.0" layoutX="20.0" layoutY="267.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="307.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 8; -fx-border-color: #FB6B90; -fx-border-radius: 8;" text="Аналітична геометрія" textFill="#fb6b90">
+               <font>
+                  <Font name="Segoe UI Semilight" size="21.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </Button>
+            <Button fx:id="line_on_plane_button" layoutX="375.0" layoutY="72.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="255.0" style="-fx-background-color: #FB6B90; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-insets: 4;" text="Пряма на площині">
+               <font>
+                  <Font name="Segoe UI Semilight" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="plane_in_space_button" layoutX="375.0" layoutY="152.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="255.0" style="-fx-background-color: #FB6B90; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-insets: 4;" text="Площина у просторі">
+               <font>
+                  <Font name="Segoe UI Semilight" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="line_in_space_button" layoutX="375.0" layoutY="232.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="255.0" style="-fx-background-color: #FB6B90; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-insets: 4;" text="Пряма у просторі">
+               <font>
+                  <Font name="Segoe UI Semilight" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="curves_button" layoutX="375.0" layoutY="392.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="255.0" style="-fx-background-color: #FB6B90; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-insets: 4;" text="Криві другого порядку">
+               <font>
+                  <Font name="Segoe UI Semilight" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="lineAndPlane_button" layoutX="375.0" layoutY="312.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="255.0" style="-fx-background-color: #FB6B90; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-insets: 4;" text="Пряма і площина">
+               <font>
+                  <Font name="Segoe UI Semilight" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+        </AnchorPane>
+      <ImageView fitHeight="176.0" fitWidth="140.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/do_image.png" />
+         </image>
+      </ImageView>
+        <Label alignment="TOP_CENTER" contentDisplay="TOP" layoutX="251.0" layoutY="14.0" prefHeight="38.0" prefWidth="195.0" textAlignment="CENTER">
+            <font>
+                <Font name="Segoe UI Semibold" size="34.0" />
+            </font>
+        </Label>
+      <Label alignment="TOP_CENTER" contentDisplay="TOP" layoutX="171.0" layoutY="18.0" prefHeight="54.0" prefWidth="356.0" text="Головна сторінка" textAlignment="CENTER">
+         <font>
+            <Font name="Segoe UI Semibold" size="29.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" contentDisplay="TOP" layoutX="222.0" layoutY="52.0" prefHeight="27.0" prefWidth="255.0" text="інтерактивний освітній ресурс" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Light" size="17.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

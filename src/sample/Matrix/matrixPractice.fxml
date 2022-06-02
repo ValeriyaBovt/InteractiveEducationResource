@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="738.0" prefWidth="1070.0" style="-fx-background-color: #FB6B90;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Matrix.MatrixPractice">
+    <children>
+        <AnchorPane layoutY="83.0" prefHeight="657.0" prefWidth="1072.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <Button fx:id="toMenu_button" mnemonicParsing="false" prefHeight="52.0" prefWidth="1072.0" style="-fx-background-color: #000000; -fx-background-radius: 0;" text="Головна" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="25.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <TextField fx:id="a11_text" layoutX="375.0" layoutY="110.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+                <TextField fx:id="a13_text" layoutX="475.0" layoutY="110.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+                <TextField fx:id="a14_text" layoutX="525.0" layoutY="110.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+                <TextField fx:id="a12_text" layoutX="425.0" layoutY="110.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+                <TextField fx:id="a15_text" layoutX="575.0" layoutY="110.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="TEXT" />
+                    </cursor>
+                </TextField>
+                <TextField fx:id="a21_text" layoutX="375.0" layoutY="160.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a23_text" layoutX="475.0" layoutY="160.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a24_text" layoutX="525.0" layoutY="160.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a22_text" layoutX="425.0" layoutY="160.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a25_text" layoutX="575.0" layoutY="160.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a31_text" layoutX="375.0" layoutY="210.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a33_text" layoutX="475.0" layoutY="210.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a34_text" layoutX="525.0" layoutY="210.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a32_text" layoutX="425.0" layoutY="210.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a35_text" layoutX="575.0" layoutY="210.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a41_text" layoutX="375.0" layoutY="260.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a43_text" layoutX="475.0" layoutY="260.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a44_text" layoutX="525.0" layoutY="260.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a42_text" layoutX="425.0" layoutY="260.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a45_text" layoutX="575.0" layoutY="260.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a51_text" layoutX="375.0" layoutY="310.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a53_text" layoutX="475.0" layoutY="310.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a54_text" layoutX="525.0" layoutY="310.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a52_text" layoutX="425.0" layoutY="310.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="a55_text" layoutX="575.0" layoutY="310.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="15.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="73.0" layoutY="62.0" prefHeight="40.0" prefWidth="262.0" text="Оберіть, що ви хочете зробити:" underline="true">
+                    <font>
+                        <Font name="Segoe UI Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Button fx:id="multiplyByNumber_button" layoutX="73.0" layoutY="110.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="242.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Множення матриці на чило" textFill="#fb6b90">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="17.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="answer_button" layoutX="127.0" layoutY="524.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #fb6b90; -fx-background-radius: 3;" text="Порахувати" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="17.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Label fx:id="solution_label" layoutX="437.0" layoutY="359.0" prefHeight="271.0" prefWidth="454.0" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font name="System Italic" size="16.0" />
+                    </font>
+                </Label>
+            <Button fx:id="addMatrix_button" layoutX="72.0" layoutY="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="242.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Додавання матриць" textFill="#fb6b90">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="inverseMatrix_button" layoutX="73.0" layoutY="210.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="242.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Знайти обернену матрицю" textFill="#fb6b90">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="b11_text" layoutX="660.0" layoutY="107.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="b13_text" layoutX="760.0" layoutY="107.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="b14_text" layoutX="810.0" layoutY="107.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="b12_text" layoutX="710.0" layoutY="107.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="b15_text" layoutX="860.0" layoutY="107.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="b21_text" layoutX="660.0" layoutY="157.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b23_text" layoutX="760.0" layoutY="157.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b24_text" layoutX="810.0" layoutY="157.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b22_text" layoutX="710.0" layoutY="157.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b25_text" layoutX="860.0" layoutY="157.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b31_text" layoutX="660.0" layoutY="207.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b33_text" layoutX="760.0" layoutY="207.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b34_text" layoutX="810.0" layoutY="207.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b32_text" layoutX="710.0" layoutY="207.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b35_text" layoutX="860.0" layoutY="207.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b41_text" layoutX="660.0" layoutY="257.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b43_text" layoutX="760.0" layoutY="257.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b44_text" layoutX="810.0" layoutY="257.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b42_text" layoutX="710.0" layoutY="257.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b45_text" layoutX="860.0" layoutY="257.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b51_text" layoutX="660.0" layoutY="307.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b53_text" layoutX="760.0" layoutY="307.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b54_text" layoutX="810.0" layoutY="307.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b52_text" layoutX="710.0" layoutY="307.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="b55_text" layoutX="860.0" layoutY="307.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Semilight" size="15.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" layoutX="450.0" layoutY="67.0" prefHeight="40.0" prefWidth="87.0" text="Матриця А">
+               <font>
+                  <Font name="Segoe UI Emoji" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="matrixB_label" alignment="CENTER" layoutX="735.0" layoutY="67.0" prefHeight="40.0" prefWidth="87.0" text="Матриця В">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="number_text" layoutX="663.0" layoutY="200.0" prefHeight="52.0" prefWidth="87.0" promptText="λ">
+               <font>
+                  <Font size="25.0" />
+               </font></TextField>
+            <Label fx:id="plus_label" layoutX="628.0" layoutY="197.0" prefHeight="40.0" prefWidth="21.0" text="+">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="multiply_label" layoutX="628.0" layoutY="198.0" prefHeight="40.0" prefWidth="21.0" text="×">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="111.0" layoutY="260.0" prefHeight="40.0" prefWidth="166.0" text="Оберіть розмірність:" underline="true">
+               <font>
+                  <Font name="Segoe UI Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="size2Square_button" layoutX="99.0" layoutY="308.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="2×2" textFill="#fb6b90" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="size4Square_button" layoutX="99.0" layoutY="357.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="4×4" textFill="#fb6b90" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="size3Square_button" layoutX="197.0" layoutY="308.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="3×3" textFill="#fb6b90" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="size5Square_button" layoutX="197.0" layoutY="357.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="5×5" textFill="#fb6b90" visible="false">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="sizeForAdd_label" alignment="CENTER" layoutX="113.0" layoutY="290.0" prefHeight="40.0" prefWidth="149.0" text="m          ×          n" textAlignment="CENTER">
+               <font>
+                  <Font name="Segoe UI Light Italic" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="mSize2_but" layoutX="111.0" layoutY="330.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="2" textFill="#fb6b90">
+               <font>
+                  <Font name="Segoe UI Semilight" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="mSize3_but" layoutX="111.0" layoutY="375.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="3" textFill="#fb6b90">
+               <font>
+                  <Font name="Segoe UI Semilight" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="mSize4_but" layoutX="111.0" layoutY="420.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="4" textFill="#fb6b90">
+               <font>
+                  <Font name="Segoe UI Semilight" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="mSize5_but" layoutX="111.0" layoutY="465.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="5" textFill="#fb6b90">
+               <font>
+                  <Font name="Segoe UI Semilight" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="nSize2_but" layoutX="222.0" layoutY="330.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="2" textFill="#fb6b90">
+               <font>
+                  <Font name="Segoe UI Semilight" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="nSize3_but" layoutX="222.0" layoutY="375.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="3" textFill="#fb6b90">
+               <font>
+                  <Font name="Segoe UI Semilight" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="nSize4_but" layoutX="222.0" layoutY="420.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="4" textFill="#fb6b90">
+               <font>
+                  <Font name="Segoe UI Semilight" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="nSize5_but" layoutX="222.0" layoutY="465.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="5" textFill="#fb6b90">
+               <font>
+                  <Font name="Segoe UI Semilight" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="solutionMult_label" layoutX="763.0" layoutY="85.0" prefHeight="290.0" prefWidth="278.0" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="solutionInverse_label" layoutX="371.0" layoutY="370.0" prefHeight="156.0" prefWidth="655.0" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="InverseSolve_label" layoutX="387.0" layoutY="530.0" prefHeight="118.0" prefWidth="242.0" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="resultInverse_label" alignment="CENTER" layoutX="689.0" layoutY="511.0" prefHeight="118.0" prefWidth="370.0" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="next_label" layoutX="643.0" layoutY="564.0" prefHeight="40.0" prefWidth="30.0" text="⇒">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="24.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <ImageView fitHeight="176.0" fitWidth="140.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/do_image.png" />
+            </image>
+        </ImageView>
+        <Label alignment="CENTER" layoutX="408.0" layoutY="15.0" prefHeight="58.0" prefWidth="272.0" text="Практика.Матриці">
+            <font>
+                <Font name="Segoe UI Semibold" size="29.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="450.0" layoutY="37.0" prefHeight="58.0" prefWidth="187.0" text="елементи лінійної алгебри" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Semilight" size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="back_button" layoutX="889.0" layoutY="24.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #000000; -fx-background-radius: 3;" text="Повернутися" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Semilight" size="17.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+        </Button>
+    </children>
+</AnchorPane>

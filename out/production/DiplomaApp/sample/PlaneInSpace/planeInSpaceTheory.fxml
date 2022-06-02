@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="785.0" prefWidth="778.0" style="-fx-background-color: #FB6B90;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PlaneInSpace.PlaneInSpaceTheory">
+    <children>
+        <AnchorPane layoutY="83.0" prefHeight="701.0" prefWidth="700.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <Button fx:id="toMenu_button" mnemonicParsing="false" prefHeight="52.0" prefWidth="778.0" style="-fx-background-color: #000000; -fx-background-radius: 0;" text="Головна" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="25.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <ImageView fx:id="backPage" fitHeight="87.0" fitWidth="93.0" layoutX="87.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/backPage.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="170.0" layoutY="84.0" prefHeight="611.0" prefWidth="437.0" style="-fx-background-color: #000000;" />
+                <ImageView fx:id="page_img" fitHeight="586.0" fitWidth="420.0" layoutX="182.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/PlaneInSpace/page1.jpg" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="CROSSHAIR" />
+                    </cursor>
+                </ImageView>
+                <Label fx:id="page1_label" layoutX="362.0" layoutY="52.0" text="1" textFill="#fb6b90" underline="true">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="21.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Label>
+                <Label fx:id="page2_label" layoutX="382.0" layoutY="52.0" text="2" textFill="#fb6b90" underline="true">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="21.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Label>
+                <Label fx:id="page3_label" layoutX="403.0" layoutY="52.0" text="3" textFill="#fb6b90" underline="true">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="21.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Label>
+                <ImageView fx:id="backPageActive" fitHeight="87.0" fitWidth="93.0" layoutX="87.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/backPageActive.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="backCatLabel" layoutX="92.0" layoutY="60.0" prefHeight="87.0" prefWidth="77.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></Label>
+                <ImageView fx:id="nextPage" fitHeight="87.0" fitWidth="93.0" layoutX="603.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/nextPage.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="nextPageActive" fitHeight="87.0" fitWidth="93.0" layoutX="603.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/nextPageActive.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="nextCatLabel" layoutX="613.0" layoutY="63.0" prefHeight="87.0" prefWidth="77.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor></Label>
+                <Button fx:id="downloadThisOnly_button" alignment="TOP_CENTER" layoutX="625.0" layoutY="250.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="130.0" style="-fx-background-color: #FB6B90; -fx-background-radius: 3;" text="&quot;Площина у просторі&quot;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="12.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="downloadFull_button" alignment="TOP_CENTER" layoutX="625.0" layoutY="330.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="130.0" style="-fx-background-color: #FB6B90; -fx-background-radius: 3;" text="Повний курс" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Semilight" size="17.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                    </cursor>
+                </Button>
+                <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="670.0" layoutY="279.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/load.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="670.0" layoutY="355.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/load.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <ImageView fitHeight="176.0" fitWidth="140.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/do_image.png" />
+            </image>
+        </ImageView>
+        <Label alignment="CENTER" layoutX="163.0" layoutY="16.0" prefHeight="58.0" prefWidth="451.0" text="Теорія.Площина у просторі">
+            <font>
+                <Font name="Segoe UI Semibold" size="29.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="295.0" layoutY="36.0" prefHeight="58.0" prefWidth="187.0" text="аналітична геометрія" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Semilight" size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="back_button" layoutX="613.0" layoutY="25.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #000000; -fx-background-radius: 3;" text="Повернутися" textFill="WHITE">
+            <font>
+                <Font name="Segoe UI Semilight" size="17.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+        </Button>
+    </children>
+</AnchorPane>
