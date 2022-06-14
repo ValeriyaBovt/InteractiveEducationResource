@@ -4,6 +4,100 @@ public class Matrix {
 
     public double[][] matrix;
 
+    public String KramerMethod(Matrix copy)
+    {
+        double [][] matrixCopy=copy.matrix;
+        for(int i =0;i<3;i++)
+        {
+            for(int j =0;j<4;j++)
+                matrixCopy[i][j]=matrix[i][j];
+        }
+        double det = Determinant3size();
+        String row1 = "Шукаємо головний визначник:  "+ solveDeterminant3size()+".\n";
+        if(Determinant2Size()==0)
+            return row1+"Оскільки визначник дорівнює 0 система не може бути розв'язана таким методом (система не має розв'язків" +
+                    " або має безліч розв'язків.";
+        matrix[0][0]=matrix[0][3];
+        matrix[1][0]=matrix[1][3];
+        matrix[2][0]=matrix[2][3];
+        double det1 = Determinant3size();
+        matrix[0][0]=matrixCopy[0][0];
+        matrix[1][0]=matrixCopy[1][0];
+        matrix[2][0]=matrixCopy[2][0];
+        String row2 = "      |"+matrix[0][3]+" "+matrix[0][1]+" "+ matrix[0][2]+"|\n"+
+                      "Δ₁= |"+matrix[1][3]+" "+matrix[1][1]+" "+ matrix[1][2]+"| = "+det1+"\n"+
+                      "      |"+matrix[2][3]+" "+matrix[2][1]+" "+ matrix[2][2]+"|\n";
+        matrix[0][1]=matrix[0][3];
+        matrix[1][1]=matrix[1][3];
+        matrix[2][1]=matrix[2][3];
+        double det2 = Determinant3size();
+        matrix[0][1]=matrixCopy[0][1];
+        matrix[1][1]=matrixCopy[1][1];
+        matrix[2][1]=matrixCopy[2][1];
+        String row3 = "      |"+matrix[0][0]+" "+matrix[0][3]+" "+ matrix[0][2]+"|\n"+
+                "Δ₂= |"+matrix[1][0]+" "+matrix[1][3]+" "+ matrix[1][2]+"| = "+det2+"\n"+
+                "      |"+matrix[2][0]+" "+matrix[2][3]+" "+ matrix[2][2]+"|\n";
+        matrix[0][2]=matrix[0][3];
+        matrix[1][2]=matrix[1][3];
+        matrix[2][2]=matrix[2][3];
+        double det3 = Determinant3size();
+        matrix[0][2]=matrixCopy[0][2];
+        matrix[1][2]=matrixCopy[1][2];
+        matrix[2][2]=matrixCopy[2][2];
+        String row4 = "      |"+matrix[0][0]+" "+matrix[0][1]+" "+ matrix[0][3]+"|\n"+
+                "Δ₃= |"+matrix[1][0]+" "+matrix[1][1]+" "+ matrix[1][3]+"| = "+det3+"\n"+
+                "      |"+matrix[2][0]+" "+matrix[2][1]+" "+ matrix[2][3]+"|\n";
+        String row5 = "x₁=Δ₁/Δ="+det1+"/"+det+"="+String.format("%.3f",det1/det)+";     "+
+                "x₂=Δ₂/Δ="+det2+"/"+det+"="+String.format("%.3f",det2/det)+";     "+
+                "x₃=Δ₃/Δ="+det3+"/"+det+"="+String.format("%.3f",det3/det)+";     ";
+
+
+        return row1+row2+row3+row4+row5;
+
+    }
+
+
+    public String matrixMethod()
+    {
+        String row1 = " Записуємо систему у матричному вигляді: AX=H, де\n"+
+                "     |"+matrix[0][0]+" "+matrix[0][1]+" "+ matrix[0][2]+"|         |"+matrix[0][3]+"|        |x₁|\n"+
+                "А=|"+matrix[1][0]+" "+matrix[1][1]+" "+ matrix[1][3]+"|,   H=|"+matrix[1][3]+"|,   X=|x₂|\n"+
+                "     |"+matrix[2][0]+" "+matrix[2][1]+" "+ matrix[2][3]+"|         |"+matrix[2][3]+"|        |x₃|\n";
+        String row2 = "1. Знаходимо "+solveDeterminant3size();
+        double det = Determinant3size();
+        if(det==0)
+            return  row1+row2+".\nОскільки визначник дорівнює 0 система не може бути розв'язана таким методом (система не має розв'язків" +
+                    " або має безліч розв'язків.";
+        else row2+="≠0.\n";
+        double[][] inverse = buildInverseMatrix3();
+        String row3 = "2. Знаходимо А⁻¹, оскільки Х=А⁻¹Н. Маємо: (детальний розв'язок Матриці.Обернена матриця)\n"+
+                printInverseMatrixSolve(inverse,3);
+        String row4 = "Знаходимо А⁻¹H=X. Маємо:\n"+
+                "                  ("+String.format("%.2f",inverse[0][0])+" "+String.format("%.2f",inverse[0][1])+" "+String.format("%.2f",inverse[0][2])+")("+matrix[0][3]+")           "+
+                "("+String.format("%.2f",inverse[0][0]*matrix[0][3])+"+"+String.format("%.2f",inverse[0][1]*matrix[1][3])+"+"+String.format("%.2f",inverse[0][2]*matrix[2][3])+")"+
+                "           ("+String.format("%.2f",inverse[0][0]*matrix[0][3]+inverse[0][1]*matrix[1][3]+inverse[0][2]*matrix[2][3])+")\n"+
+
+                "A⁻¹ = ⅟"+det+"("+String.format("%.2f",inverse[1][0])+" "+String.format("%.2f",inverse[1][1])+" "+String.format("%.2f",inverse[1][2])+")("+matrix[1][3]+")=⅟"+Determinant3size()+
+                "("+String.format("%.2f",inverse[1][0]*matrix[0][3])+"+"+String.format("%.2f",inverse[1][1]*matrix[1][3])+"+"+String.format("%.2f",inverse[1][2]*matrix[2][3])+")"+
+               " = ⅟"+det+"("+String.format("%.2f",inverse[1][0]*matrix[0][3]+inverse[1][1]*matrix[1][3]+inverse[1][2]*matrix[2][3])+")\n"+
+
+                "                  ("+String.format("%.2f",inverse[2][0])+" "+String.format("%.2f",inverse[2][1])+" "+String.format("%.2f",inverse[2][2])+")("+matrix[2][3]+")        "+
+                "("+String.format("%.2f",inverse[2][0]*matrix[0][3])+"+"+String.format("%.2f",inverse[2][1]*matrix[1][3])+"+"+String.format("%.2f",inverse[2][2]*matrix[2][3])+")"+
+                "           ("+String.format("%.2f",inverse[2][0]*matrix[0][3]+inverse[0][1]*matrix[2][3]+inverse[2][2]*matrix[2][3])+")\n";
+        String row5 = "Отже, x₁=1/"+det+"∙"+String.format("%.2f",inverse[0][0]*matrix[0][3]+inverse[0][1]*matrix[1][3]+inverse[0][2]*matrix[2][3])+"="+String.format("%.2f",(inverse[0][0]*matrix[0][3]+inverse[0][1]*matrix[1][3]+inverse[0][2]*matrix[2][3])/det)+
+                "; x₂=1/"+det+"∙"+String.format("%.2f",inverse[1][0]*matrix[0][3]+inverse[1][1]*matrix[1][3]+inverse[1][2]*matrix[2][3])+"="+String.format("%.2f",(inverse[1][0]*matrix[0][3]+inverse[1][1]*matrix[1][3]+inverse[1][2]*matrix[2][3])/det)+
+                "; x₃=1/"+det+"∙"+String.format("%.2f",inverse[2][0]*matrix[0][3]+inverse[2][1]*matrix[1][3]+inverse[2][2]*matrix[2][3])+"="+String.format("%.2f",(inverse[2][0]*matrix[0][3]+inverse[2][1]*matrix[1][3]+inverse[2][2]*matrix[2][3])/det);
+
+
+
+        return  row1+row2+row3+row4+row5;
+    }
+
+
+
+
+
+
     public String solveInverseMatrix3()
     {
         double[][] inverseMatrix=buildInverseMatrix3();
@@ -58,7 +152,7 @@ public class Matrix {
             if(i==1)
                 result+="A⁻¹ = ⅟"+Determinant3size()+"|";
             else
-                result+="               |";
+                result+="                   |";
             for(int j=0;j<n;j++)
             {
                 result+=String.format("%.2f",a[i][j])+" ";
@@ -72,15 +166,15 @@ public class Matrix {
     {
         double[][] inverseMatrix= new double[3][3];
 
-        inverseMatrix[0][0]=matrix[1][1]*matrix[2][2]-matrix[1][2]*matrix[2][1];
-        inverseMatrix[1][0]=(matrix[1][0]*matrix[2][2]-matrix[1][2]*matrix[2][0])*(-1);
-        inverseMatrix[2][0]=(matrix[1][0]*matrix[2][1]-matrix[1][0]*matrix[2][0]);
-        inverseMatrix[0][1]=(matrix[0][1]*matrix[2][2]-matrix[0][2]*matrix[2][1])*(-1);
-        inverseMatrix[1][1]=(matrix[0][0]*matrix[2][2]-matrix[0][2]*matrix[2][0]);
-        inverseMatrix[2][1]=(matrix[0][0]*matrix[2][1]-matrix[0][2]*matrix[0][1])*(-1);
-        inverseMatrix[0][2]=(matrix[0][1]*matrix[1][2]-matrix[0][2]*matrix[1][1]);
-        inverseMatrix[1][2]=(matrix[0][0]*matrix[1][2]-matrix[0][2]*matrix[1][0])*(-1);
-        inverseMatrix[2][2]=(matrix[0][0]*matrix[1][1]-matrix[0][1]*matrix[1][0]);
+        inverseMatrix[0][0]=matrix[1][1]*matrix[2][2]-matrix[1][2]*matrix[2][1];//
+        inverseMatrix[1][0]=(matrix[1][0]*matrix[2][2]-matrix[1][2]*matrix[2][0])*(-1);//
+        inverseMatrix[2][0]=(matrix[1][0]*matrix[2][1]-matrix[1][1]*matrix[2][0]);//
+        inverseMatrix[0][1]=(matrix[0][1]*matrix[2][2]-matrix[0][2]*matrix[2][1])*(-1);//
+        inverseMatrix[1][1]=(matrix[0][0]*matrix[2][2]-matrix[0][2]*matrix[2][0]);//
+        inverseMatrix[2][1]=(matrix[0][0]*matrix[2][1]-matrix[0][1]*matrix[2][0])*(-1);
+        inverseMatrix[0][2]=(matrix[0][1]*matrix[1][2]-matrix[0][2]*matrix[1][1]);//
+        inverseMatrix[1][2]=(matrix[0][0]*matrix[1][2]-matrix[0][2]*matrix[1][0])*(-1);//
+        inverseMatrix[2][2]=(matrix[0][0]*matrix[1][1]-matrix[0][1]*matrix[1][0]);//
         return  inverseMatrix;
     }
 

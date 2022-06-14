@@ -123,6 +123,11 @@ public class LineAndPlaneMenu {
             test_button.getScene().getWindow().hide();
             openWindow("/sample/LineAndPlane/lineAndPlaneTest.fxml");
         });
+        practice_button.setOnAction(event -> {
+            test_button.getScene().getWindow().hide();
+            openWindow("/sample/LineAndPlane/lineAndPlanePractice.fxml");
+        });
+
 
 
     }

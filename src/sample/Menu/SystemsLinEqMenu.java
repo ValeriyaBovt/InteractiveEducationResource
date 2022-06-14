@@ -123,6 +123,10 @@ public class SystemsLinEqMenu {
            theory_button.getScene().getWindow().hide();
             openWindow("/sample/SystemLinEq/systemLinEqTheory.fxml");
         });
+       practice_button.setOnAction(event -> {
+            practice_button.getScene().getWindow().hide();
+            openWindow("/sample/SystemLinEq/systemLinEqPractice.fxml");
+        });
 
 
     }

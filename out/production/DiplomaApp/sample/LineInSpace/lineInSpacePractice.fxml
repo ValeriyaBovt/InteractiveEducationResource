@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="936.0" style="-fx-background-color: #FB6B90;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LineInSpace.LineInSpacePractice">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="745.0" prefWidth="936.0" style="-fx-background-color: #FB6B90;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LineInSpace.LineInSpacePractice">
     <children>
-        <AnchorPane layoutY="83.0" prefHeight="612.0" prefWidth="936.0" style="-fx-background-color: #ffffff;">
+        <AnchorPane layoutY="83.0" prefHeight="664.0" prefWidth="936.0" style="-fx-background-color: #ffffff;">
             <children>
                 <Button fx:id="toMenu_button" mnemonicParsing="false" prefHeight="52.0" prefWidth="936.0" style="-fx-background-color: #000000; -fx-background-radius: 0;" text="Головна" textFill="WHITE">
                     <font>
-                        <Font size="25.0" />
+                        <Font name="Segoe UI Semilight" size="25.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="HAND" />
@@ -23,94 +23,94 @@
                 </Button>
                 <Button fx:id="makeEqByTwoPoints_button" layoutX="49.0" layoutY="80.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="391.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Рівняння прямої через дві точки" textFill="#fb6b90">
                     <font>
-                        <Font size="17.0" />
+                        <Font name="Segoe UI Semilight" size="16.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="OPEN_HAND" />
                     </cursor>
                 </Button>
-                <Button fx:id="findAngle_button" layoutX="49.0" layoutY="180.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="391.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Знайти кут між прямими" textFill="#fb6b90">
+                <Button fx:id="findProjection_button" layoutX="49.0" layoutY="180.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="391.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Знайти проекцію точки на пряму" textFill="#fb6b90">
                     <font>
-                        <Font size="17.0" />
+                        <Font name="Segoe UI Semilight" size="16.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="OPEN_HAND" />
                     </cursor>
                 </Button>
-                <Button fx:id="solve_button" layoutX="748.0" layoutY="130.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #fb6b90; -fx-background-radius: 3;" text="Розв'язок" textFill="WHITE">
+                <Button fx:id="solve_button" layoutX="657.0" layoutY="364.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #fb6b90; -fx-background-radius: 3;" text="Розв'язок" textFill="WHITE">
                     <font>
-                        <Font size="17.0" />
+                        <Font name="Segoe UI Semilight" size="17.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
-                <Label fx:id="solution_label" alignment="CENTER" layoutX="43.0" layoutY="340.0" prefHeight="244.0" prefWidth="875.0" textAlignment="CENTER" wrapText="true">
+                <Label fx:id="solution_label" layoutX="34.0" layoutY="404.0" prefHeight="244.0" prefWidth="885.0" wrapText="true">
                     <font>
-                        <Font name="System Bold Italic" size="17.0" />
+                        <Font name="Segoe UI Bold Italic" size="15.0" />
                     </font>
                 </Label>
-                <Label fx:id="pointA_label" layoutX="513.0" layoutY="97.0" prefHeight="46.0" prefWidth="210.0" text="А(                 )">
+                <Label fx:id="pointA_label" layoutX="493.0" layoutY="97.0" prefHeight="46.0" prefWidth="210.0" text="А(                    )">
                     <font>
-                        <Font name="System Bold" size="31.0" />
+                        <Font name="Segoe UI Semibold Italic" size="29.0" />
                     </font>
                 </Label>
-                <Label fx:id="pointB_label" layoutX="514.0" layoutY="147.0" prefHeight="46.0" prefWidth="201.0" text="B(                 )">
+                <Label fx:id="pointB_label" layoutX="703.0" layoutY="97.0" prefHeight="46.0" prefWidth="201.0" text="B(                    )">
                     <font>
-                        <Font name="System Bold" size="31.0" />
+                        <Font name="Segoe UI Semibold Italic" size="29.0" />
                     </font>
                 </Label>
-                <TextField layoutX="550.0" layoutY="100.0" prefHeight="40.0" prefWidth="40.0" promptText="0" fx:id="xA_text">
+                <TextField layoutX="530.0" layoutY="100.0" prefHeight="40.0" prefWidth="40.0" promptText="х₁" fx:id="xA_text">
                     <font>
-                        <Font size="15.0" />
+                        <Font name="Segoe UI Light Italic" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField fx:id="zA_text" layoutX="650.0" layoutY="100.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                <TextField fx:id="zA_text" layoutX="630.0" layoutY="100.0" prefHeight="40.0" prefWidth="40.0" promptText="z₁">
                     <font>
-                        <Font size="15.0" />
+                        <Font name="Segoe UI Light Italic" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField fx:id="yA_text" layoutX="600.0" layoutY="100.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                <TextField fx:id="yA_text" layoutX="580.0" layoutY="100.0" prefHeight="40.0" prefWidth="40.0" promptText="y₁">
                     <font>
-                        <Font size="15.0" />
+                        <Font name="Segoe UI Light Italic" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField layoutX="550.0" layoutY="150.0" prefHeight="40.0" prefWidth="40.0" promptText="0" fx:id="xB_text">
+                <TextField layoutX="739.0" layoutY="100.0" prefHeight="40.0" prefWidth="40.0" promptText="х₂" fx:id="xB_text">
                     <font>
-                        <Font size="15.0" />
+                        <Font name="Segoe UI Light Italic" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField fx:id="zB_text" layoutX="650.0" layoutY="150.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                <TextField fx:id="zB_text" layoutX="839.0" layoutY="100.0" prefHeight="40.0" prefWidth="40.0" promptText="z₂">
                     <font>
-                        <Font size="15.0" />
+                        <Font name="Segoe UI Light Italic" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField fx:id="yB_text" layoutX="600.0" layoutY="150.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+                <TextField fx:id="yB_text" layoutX="789.0" layoutY="100.0" prefHeight="40.0" prefWidth="40.0" promptText="y₂">
                     <font>
-                        <Font size="15.0" />
+                        <Font name="Segoe UI Light Italic" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <Button fx:id="eqLineByIntersectionPlanes_button" layoutX="49.0" layoutY="230.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="391.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Рівняння прямої - лінія перетину площин" textFill="#fb6b90">
+                <Button fx:id="findInersectionPoint_button" layoutX="49.0" layoutY="230.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="391.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Знайти точку перетину прямих" textFill="#fb6b90">
                     <font>
-                        <Font size="17.0" />
+                        <Font name="Segoe UI Semilight" size="16.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="OPEN_HAND" />
@@ -118,139 +118,180 @@
                 </Button>
                 <Button fx:id="makeEqByPointVector_button" layoutX="49.0" layoutY="130.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="391.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Рівняння прямої через точку і напрямний вектор" textFill="#fb6b90">
                     <font>
-                        <Font size="16.0" />
+                        <Font name="Segoe UI Semilight" size="16.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="OPEN_HAND" />
                     </cursor>
                 </Button>
-                <Button fx:id="isPerpendicular_button" layoutX="49.0" layoutY="280.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="391.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Чи є прямі перпендикулярними?" textFill="#fb6b90">
+                <Button fx:id="findDistanseBetweenPointAndLine_button" layoutX="49.0" layoutY="280.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="391.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Знайти відстань від точки до прямої" textFill="#fb6b90">
                     <font>
-                        <Font size="17.0" />
+                        <Font name="Segoe UI Semilight" size="16.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="OPEN_HAND" />
                     </cursor>
                 </Button>
-                <Label fx:id="eq1_label" layoutX="469.0" layoutY="207.0" prefHeight="46.0" prefWidth="426.0" text="𝛼1:       x +      y +      z +      = 0">
+                <Label fx:id="vector_label" layoutX="704.0" layoutY="97.0" prefHeight="46.0" prefWidth="210.0" text="S⃗(                   )">
                     <font>
-                        <Font name="System Bold Italic" size="29.0" />
+                        <Font name="Segoe UI Semibold Italic" size="31.0" />
                     </font>
                 </Label>
-                <TextField fx:id="сoefA1_text" layoutX="522.0" layoutY="212.0" prefHeight="40.0" prefWidth="40.0" promptText="A">
+                <TextField fx:id="lVectorS_text" layoutX="740.0" layoutY="101.0" prefHeight="40.0" prefWidth="40.0" promptText="l">
                     <font>
-                        <Font size="17.0" />
+                        <Font name="Segoe UI Italic" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField fx:id="сoefB1_text" layoutX="613.0" layoutY="212.0" prefHeight="40.0" prefWidth="40.0" promptText="B">
+                <TextField fx:id="pVectorS_text" layoutX="840.0" layoutY="101.0" prefHeight="40.0" prefWidth="40.0" promptText="p">
                     <font>
-                        <Font size="17.0" />
+                        <Font name="Segoe UI Italic" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <TextField fx:id="сoefC1_text" layoutX="706.0" layoutY="212.0" prefHeight="40.0" prefWidth="40.0" promptText="C">
+                <TextField fx:id="mVectorS_text" layoutX="790.0" layoutY="101.0" prefHeight="40.0" prefWidth="40.0" promptText="m">
                     <font>
-                        <Font size="17.0" />
+                        <Font name="Segoe UI Italic" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="TEXT" />
                     </cursor>
                 </TextField>
-                <Label fx:id="eq2_label" layoutX="469.0" layoutY="255.0" prefHeight="46.0" prefWidth="425.0" text="𝛼2:       x +      y +      z+       = 0">
+                <Button fx:id="makePerpendicularEq_button" layoutX="49.0" layoutY="330.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="391.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Скласти рівняння перпендикуляра через точку" textFill="#fb6b90">
                     <font>
-                        <Font name="System Bold Italic" size="29.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="сoefA2_text" layoutX="522.0" layoutY="260.0" prefHeight="40.0" prefWidth="40.0" promptText="A">
-                    <font>
-                        <Font size="17.0" />
-                    </font>
-                    <cursor>
-                        <Cursor fx:constant="TEXT" />
-                    </cursor>
-                </TextField>
-                <TextField fx:id="сoefB2_text" layoutX="613.0" layoutY="260.0" prefHeight="40.0" prefWidth="40.0" promptText="B">
-                    <font>
-                        <Font size="17.0" />
-                    </font>
-                    <cursor>
-                        <Cursor fx:constant="TEXT" />
-                    </cursor>
-                </TextField>
-                <TextField fx:id="сoefC2_text" layoutX="706.0" layoutY="260.0" prefHeight="40.0" prefWidth="40.0" promptText="C">
-                    <font>
-                        <Font size="17.0" />
-                    </font>
-                    <cursor>
-                        <Cursor fx:constant="TEXT" />
-                    </cursor>
-                </TextField>
-                <TextField fx:id="сoefD1_text" layoutX="795.0" layoutY="212.0" prefHeight="40.0" prefWidth="40.0" promptText="D">
-                    <font>
-                        <Font size="17.0" />
-                    </font>
-                    <cursor>
-                        <Cursor fx:constant="TEXT" />
-                    </cursor>
-                </TextField>
-                <TextField fx:id="сoefD2_text" layoutX="795.0" layoutY="259.0" prefHeight="40.0" prefWidth="40.0" promptText="D">
-                    <font>
-                        <Font size="17.0" />
-                    </font>
-                    <cursor>
-                        <Cursor fx:constant="TEXT" />
-                    </cursor>
-                </TextField>
-                <Label fx:id="vector_label" layoutX="514.0" layoutY="197.0" prefHeight="46.0" prefWidth="194.0" text="S⃗(                 )" visible="false">
-                    <font>
-                        <Font name="System Bold" size="31.0" />
-                    </font>
-                </Label>
-                <TextField layoutX="550.0" layoutY="201.0" prefHeight="40.0" prefWidth="40.0" promptText="0" visible="false" fx:id="xn_text">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                    <cursor>
-                        <Cursor fx:constant="TEXT" />
-                    </cursor>
-                </TextField>
-                <TextField fx:id="zn_text" layoutX="650.0" layoutY="201.0" prefHeight="40.0" prefWidth="40.0" promptText="0" visible="false">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                    <cursor>
-                        <Cursor fx:constant="TEXT" />
-                    </cursor>
-                </TextField>
-                <TextField fx:id="yn_text" layoutX="600.0" layoutY="201.0" prefHeight="40.0" prefWidth="40.0" promptText="0" visible="false">
-                    <font>
-                        <Font size="15.0" />
-                    </font>
-                    <cursor>
-                        <Cursor fx:constant="TEXT" />
-                    </cursor>
-                </TextField>
-                <Button fx:id="isParallel_button" layoutX="49.0" layoutY="330.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="391.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Чи є прямі паралельними?" textFill="#fb6b90">
-                    <font>
-                        <Font size="17.0" />
+                        <Font name="Segoe UI Semilight" size="16.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="OPEN_HAND" />
                     </cursor>
                 </Button>
-            <Label fx:id="eq1Line_label" layoutX="477.0" layoutY="209.0" prefHeight="46.0" prefWidth="426.0" text="l1:       x +      y +      z +      = 0">
+            <Label fx:id="eq1Line_label" layoutX="488.0" layoutY="155.0" prefHeight="46.0" prefWidth="53.0" text="l1:">
                <font>
-                  <Font name="System Bold Italic" size="29.0" />
+                  <Font name="Segoe UI Italic" size="29.0" />
                </font>
             </Label>
-            <Label fx:id="eq2Line_label" layoutX="476.0" layoutY="257.0" prefHeight="46.0" prefWidth="426.0" text="l2:       x +      y +      z +      = 0">
+            <ImageView fx:id="eqLine1Img" fitHeight="81.0" fitWidth="391.0" layoutX="522.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/eqLine.png" />
+               </image>
+            </ImageView>
+            <TextField layoutX="598.0" layoutY="159.0" prefHeight="40.0" prefWidth="40.0" promptText="0" fx:id="x0Line1text">
                <font>
-                  <Font name="System Bold Italic" size="29.0" />
+                  <Font name="Segoe UI Light Italic" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="y0Line1text" layoutX="728.0" layoutY="159.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Light Italic" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="z0Line1text" layoutX="851.0" layoutY="159.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Light Italic" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="lLine1_text" layoutX="575.0" layoutY="209.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Light" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="pLine1_text" layoutX="826.0" layoutY="209.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Light" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="mLine1_text" layoutX="704.0" layoutY="209.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Light" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label fx:id="eq2Line_label" layoutX="494.0" layoutY="257.0" prefHeight="46.0" prefWidth="53.0" text="l2:">
+               <font>
+                  <Font name="Segoe UI Italic" size="29.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="eqLine2Img" fitHeight="81.0" fitWidth="391.0" layoutX="528.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/eqLine.png" />
+               </image>
+            </ImageView>
+            <TextField layoutX="604.0" layoutY="261.0" prefHeight="40.0" prefWidth="40.0" promptText="0" fx:id="x0Line2text">
+               <font>
+                  <Font name="Segoe UI Light Italic" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="y0Line2text" layoutX="734.0" layoutY="261.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Light Italic" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="z0Line2text" layoutX="857.0" layoutY="261.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI Light Italic" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="lLine2_text" layoutX="581.0" layoutY="311.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="pLine2_text" layoutX="832.0" layoutY="311.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="mLine2_text" layoutX="710.0" layoutY="311.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label fx:id="re" layoutX="650.0" layoutY="561.0" prefHeight="26.0" prefWidth="40.0">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+            <Label layoutX="761.0" layoutY="564.0" prefHeight="26.0" prefWidth="40.0">
+               <font>
+                  <Font size="17.0" />
                </font>
             </Label>
             </children>
@@ -260,23 +301,28 @@
                 <Image url="@../assets/do_image.png" />
             </image>
         </ImageView>
-        <Label layoutX="268.0" layoutY="16.0" prefHeight="58.0" prefWidth="399.0" text="Практика.Пряма у просторі">
+        <Label alignment="CENTER" layoutX="268.0" layoutY="16.0" prefHeight="58.0" prefWidth="399.0" text="Практика.Пряма у просторі">
             <font>
-                <Font name="System Bold" size="29.0" />
+                <Font name="Segoe UI Semibold" size="29.0" />
             </font>
         </Label>
-        <Label layoutX="392.0" layoutY="36.0" prefHeight="58.0" prefWidth="154.0" text="аналітична геометрія" textFill="WHITE">
+        <Label alignment="CENTER" layoutX="392.0" layoutY="36.0" prefHeight="58.0" prefWidth="154.0" text="аналітична геометрія" textFill="WHITE">
             <font>
-                <Font size="15.0" />
+                <Font name="Segoe UI Semilight" size="15.0" />
             </font>
         </Label>
         <Button fx:id="back_button" layoutX="748.0" layoutY="25.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #000000; -fx-background-radius: 3;" text="Повернутися" textFill="WHITE">
             <font>
-                <Font size="17.0" />
+                <Font name="Segoe UI Semilight" size="17.0" />
             </font>
             <cursor>
                 <Cursor fx:constant="OPEN_HAND" />
             </cursor>
         </Button>
+      <Label fx:id="solution_label1" alignment="CENTER" layoutX="48.0" layoutY="416.0" prefHeight="244.0" prefWidth="875.0" textAlignment="CENTER" visible="false" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="752.0" style="-fx-background-color: #FB6B90;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ProductsVector.ProductsVectorPractice">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="752.0" style="-fx-background-color: #FB6B90;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ProductsVector.ProductsVectorPractice">
     <children>
         <AnchorPane layoutY="83.0" prefHeight="539.0" prefWidth="751.0" style="-fx-background-color: #ffffff;">
             <children>
                 <Button fx:id="toMenu_button" mnemonicParsing="false" prefHeight="52.0" prefWidth="751.0" style="-fx-background-color: #000000; -fx-background-radius: 0;" text="Головна" textFill="WHITE">
                     <font>
-                        <Font size="25.0" />
+                        <Font name="Segoe UI Semilight" size="25.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="HAND" />
@@ -23,12 +23,12 @@
                 </Button>
                 <Label layoutX="22.0" layoutY="80.0" prefHeight="40.0" prefWidth="106.0" text="Оберіть дію:" underline="true">
                     <font>
-                        <Font name="System Bold" size="16.0" />
+                        <Font name="Segoe UI Bold" size="16.0" />
                     </font>
                 </Label>
                 <Button fx:id="scalarProduct_button" layoutX="141.0" layoutY="80.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Скалярний добуток двох векторів" textFill="#fb6b90">
                     <font>
-                        <Font size="17.0" />
+                        <Font name="Segoe UI Semilight" size="17.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="OPEN_HAND" />
@@ -36,7 +36,7 @@
                 </Button>
                 <Button fx:id="mixedProduct_button" layoutX="141.0" layoutY="180.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Мішаний добуток трьох векторів" textFill="#fb6b90">
                     <font>
-                        <Font size="17.0" />
+                        <Font name="Segoe UI Semilight" size="17.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="OPEN_HAND" />
@@ -44,7 +44,7 @@
                 </Button>
                 <Button fx:id="vectorProduct_button" layoutX="141.0" layoutY="130.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Векторний добуток двох векторів" textFill="#fb6b90">
                     <font>
-                        <Font size="17.0" />
+                        <Font name="Segoe UI Semilight" size="17.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="OPEN_HAND" />
@@ -52,7 +52,7 @@
                 </Button>
                 <Button fx:id="solve_button" layoutX="553.0" layoutY="230.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #fb6b90; -fx-background-radius: 3;" text="Розв'язок" textFill="WHITE">
                     <font>
-                        <Font size="17.0" />
+                        <Font name="Segoe UI Semilight" size="17.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="HAND" />
@@ -65,7 +65,7 @@
                 </Label>
                 <TextField layoutX="549.0" layoutY="74.0" prefHeight="40.0" prefWidth="40.0" promptText="0" fx:id="xa_text">
                     <font>
-                        <Font size="15.0" />
+                        <Font name="Segoe UI Light Italic" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="TEXT" />
@@ -73,7 +73,7 @@
                 </TextField>
                 <TextField fx:id="za_text" layoutX="649.0" layoutY="74.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
                     <font>
-                        <Font size="15.0" />
+                        <Font name="Segoe UI Light Italic" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="TEXT" />
@@ -81,7 +81,7 @@
                 </TextField>
                 <TextField fx:id="ya_text" layoutX="599.0" layoutY="74.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
                     <font>
-                        <Font size="15.0" />
+                        <Font name="Segoe UI Light Italic" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="TEXT" />
@@ -89,17 +89,17 @@
                 </TextField>
                 <Label fx:id="vectora_label" layoutX="495.0" layoutY="71.0" prefHeight="46.0" prefWidth="61.0" text="a⃗=(">
                     <font>
-                        <Font name="System Bold" size="31.0" />
+                        <Font name="Segoe UI Semibold Italic" size="29.0" />
                     </font>
                 </Label>
-                <Label fx:id="ear_a_lbl" layoutX="690.0" layoutY="71.0" prefHeight="46.0" prefWidth="18.0" text=")">
+                <Label fx:id="ear_a_lbl" layoutX="692.0" layoutY="71.0" prefHeight="46.0" prefWidth="18.0" text=")">
                     <font>
-                        <Font name="System Bold" size="31.0" />
+                        <Font name="Segoe UI Semibold Italic" size="29.0" />
                     </font>
                 </Label>
                 <TextField layoutX="549.0" layoutY="124.0" prefHeight="40.0" prefWidth="40.0" promptText="0" fx:id="xb_text">
                     <font>
-                        <Font size="15.0" />
+                        <Font name="Segoe UI Light Italic" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="TEXT" />
@@ -107,7 +107,7 @@
                 </TextField>
                 <TextField fx:id="zb_text" layoutX="649.0" layoutY="124.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
                     <font>
-                        <Font size="15.0" />
+                        <Font name="Segoe UI Light Italic" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="TEXT" />
@@ -115,7 +115,7 @@
                 </TextField>
                 <TextField fx:id="yb_text" layoutX="599.0" layoutY="124.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
                     <font>
-                        <Font size="15.0" />
+                        <Font name="Segoe UI Light Italic" size="15.0" />
                     </font>
                     <cursor>
                         <Cursor fx:constant="TEXT" />
@@ -123,17 +123,17 @@
                 </TextField>
                 <Label fx:id="vectorb_label" layoutX="495.0" layoutY="121.0" prefHeight="46.0" prefWidth="61.0" text="b⃗=(">
                     <font>
-                        <Font name="System Bold" size="31.0" />
+                        <Font name="Segoe UI Semibold Italic" size="29.0" />
                     </font>
                 </Label>
-                <Label fx:id="ear_b_lbl" layoutX="690.0" layoutY="121.0" prefHeight="46.0" prefWidth="18.0" text=")">
+                <Label fx:id="ear_b_lbl" layoutX="692.0" layoutY="121.0" prefHeight="46.0" prefWidth="18.0" text=")">
                     <font>
-                        <Font name="System Bold" size="31.0" />
+                        <Font name="Segoe UI Semibold Italic" size="29.0" />
                     </font>
                 </Label>
             <TextField layoutX="549.0" layoutY="174.0" prefHeight="40.0" prefWidth="40.0" promptText="0" fx:id="xс_text">
                <font>
-                  <Font size="15.0" />
+                  <Font name="Segoe UI Light Italic" size="15.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="TEXT" />
@@ -141,7 +141,7 @@
             </TextField>
             <TextField fx:id="zс_text" layoutX="649.0" layoutY="174.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
                <font>
-                  <Font size="15.0" />
+                  <Font name="Segoe UI Light Italic" size="15.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="TEXT" />
@@ -149,7 +149,7 @@
             </TextField>
             <TextField fx:id="yс_text" layoutX="599.0" layoutY="174.0" prefHeight="40.0" prefWidth="40.0" promptText="0">
                <font>
-                  <Font size="15.0" />
+                  <Font name="Segoe UI Light Italic" size="15.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="TEXT" />
@@ -157,17 +157,17 @@
             </TextField>
             <Label fx:id="vectorс_label" layoutX="499.0" layoutY="171.0" prefHeight="46.0" prefWidth="61.0" text="с⃑=(">
                <font>
-                  <Font name="System Bold" size="31.0" />
+                  <Font name="Segoe UI Semibold Italic" size="29.0" />
                </font>
             </Label>
-            <Label fx:id="ear_с_lbl" layoutX="690.0" layoutY="171.0" prefHeight="46.0" prefWidth="18.0" text=")">
+            <Label fx:id="ear_с_lbl" layoutX="692.0" layoutY="171.0" prefHeight="46.0" prefWidth="18.0" text=")">
                <font>
-                  <Font name="System Bold" size="31.0" />
+                  <Font name="Segoe UI Semibold Italic" size="29.0" />
                </font>
             </Label>
             <Button fx:id="angleBetweenVectors_button" layoutX="141.0" layoutY="230.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #FB6B90; -fx-border-radius: 5;" text="Кут між векторами" textFill="#fb6b90">
                <font>
-                  <Font size="17.0" />
+                  <Font name="Segoe UI Semilight" size="17.0" />
                </font>
                <cursor>
                   <Cursor fx:constant="OPEN_HAND" />
@@ -180,19 +180,19 @@
                 <Image url="@../assets/do_image.png" />
             </image>
         </ImageView>
-        <Label layoutX="177.0" layoutY="16.0" prefHeight="58.0" prefWidth="398.0" text="Практика.Добутки векторів">
+        <Label alignment="CENTER" layoutX="177.0" layoutY="16.0" prefHeight="58.0" prefWidth="398.0" text="Практика.Добутки векторів">
             <font>
-                <Font name="System Bold" size="29.0" />
+                <Font name="Segoe UI Semibold" size="29.0" />
             </font>
         </Label>
-        <Label layoutX="313.0" layoutY="38.0" prefHeight="58.0" prefWidth="125.0" text="векторна алгебра" textFill="WHITE">
+        <Label alignment="CENTER" layoutX="313.0" layoutY="38.0" prefHeight="58.0" prefWidth="125.0" text="векторна алгебра" textFill="WHITE">
             <font>
-                <Font size="15.0" />
+                <Font name="Segoe UI Semilight" size="15.0" />
             </font>
         </Label>
         <Button fx:id="back_button" layoutX="606.0" layoutY="25.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="131.0" style="-fx-background-color: #000000; -fx-background-radius: 3;" text="Повернутися" textFill="WHITE">
             <font>
-                <Font size="17.0" />
+                <Font name="Segoe UI Semilight" size="17.0" />
             </font>
             <cursor>
                 <Cursor fx:constant="OPEN_HAND" />

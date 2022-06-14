@@ -3,6 +3,9 @@ package sample.LineInSpace;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,7 +14,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import sample.add.LinesAndPlane;
+import sample.add.Matrix;
 
 public class LineInSpacePractice {
 
@@ -25,28 +31,43 @@ public class LineInSpacePractice {
     private Button back_button;
 
     @FXML
-    private Label eq1_label;
-
-    @FXML
-    private Label eq2_label;
+    private Label eq1Line_label;
 
     @FXML
     private Label eq2Line_label;
 
     @FXML
-    private Label eq1Line_label;
+    private ImageView eqLine1Img;
 
     @FXML
-    private Button eqLineByIntersectionPlanes_button;
+    private ImageView eqLine2Img;
 
     @FXML
-    private Button findAngle_button;
+    private Button findDistanseBetweenPointAndLine_button;
 
     @FXML
-    private Button isParallel_button;
+    private Button findInersectionPoint_button;
 
     @FXML
-    private Button isPerpendicular_button;
+    private Button findProjection_button;
+
+    @FXML
+    private TextField lLine1_text;
+
+    @FXML
+    private TextField lLine2_text;
+
+    @FXML
+    private TextField lVectorS_text;
+
+    @FXML
+    private TextField mLine1_text;
+
+    @FXML
+    private TextField mLine2_text;
+
+    @FXML
+    private TextField mVectorS_text;
 
     @FXML
     private Button makeEqByPointVector_button;
@@ -55,13 +76,22 @@ public class LineInSpacePractice {
     private Button makeEqByTwoPoints_button;
 
     @FXML
+    private Button makePerpendicularEq_button;
+
+    @FXML
+    private TextField pLine1_text;
+
+    @FXML
+    private TextField pLine2_text;
+
+    @FXML
+    private TextField pVectorS_text;
+
+    @FXML
     private Label pointA_label;
 
     @FXML
     private Label pointB_label;
-
-    @FXML
-    private Label pointC_label;
 
     @FXML
     private Label solution_label;
@@ -76,13 +106,22 @@ public class LineInSpacePractice {
     private Label vector_label;
 
     @FXML
+    private TextField x0Line1text;
+
+    @FXML
+    private TextField x0Line2text;
+
+    @FXML
     private TextField xA_text;
 
     @FXML
     private TextField xB_text;
 
     @FXML
-    private TextField xn_text;
+    private TextField y0Line1text;
+
+    @FXML
+    private TextField y0Line2text;
 
     @FXML
     private TextField yA_text;
@@ -91,192 +130,150 @@ public class LineInSpacePractice {
     private TextField yB_text;
 
     @FXML
-    private TextField yn_text;
+    private TextField z0Line1text;
+
+    @FXML
+    private TextField z0Line2text;
 
     @FXML
     private TextField zA_text;
 
     @FXML
     private TextField zB_text;
-
-    @FXML
-    private TextField zn_text;
-
-    @FXML
-    private TextField сoefA1_text;
-
-    @FXML
-    private TextField сoefA2_text;
-
-    @FXML
-    private TextField сoefB1_text;
-
-    @FXML
-    private TextField сoefB2_text;
-
-    @FXML
-    private TextField сoefC1_text;
-
-    @FXML
-    private TextField сoefC2_text;
-
-    @FXML
-    private TextField сoefD1_text;
-
-    @FXML
-    private TextField сoefD2_text;
-    private int whatDoing =1;//1 - рівняння прямої через дві точки, 2- рівняння прямої, через напрямний вектор
-    //3 - кут між прямими, 4 - пряма - перетин площин, 5- чи є перпендикулярні, 6 - чи паралельні
-
+    private int whatDoing=1;//1 - рівняння через дві точки, 2 - рівняння через точку і напрямний вектор, 3 - проекція точки на пряму,
+    //4  - точка перетину.5- точка перетину, відстань між точкою і прямою, 6 - перпендикулярна пряма
+    String startStyleForButton = "-fx-background-color: #ffffff; -fx-border-color:  #FB6B90; -fx-border-radius: 5 ";
+    String activeStyleForButton ="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 5 ";
     @FXML
     void initialize() {
-        backUp();
+        allTextFieldOnlyNumber();//введення коректних значень
+        backUp();//приховати все
+        //для початку активна перша дія
         visiblePointA(true);
         visiblePointB(true);
-        activeStyle(makeEqByTwoPoints_button);
+        makeEqByTwoPoints_button.setStyle(activeStyleForButton);
+       makeEqByTwoPoints_button.setOnAction(event -> {
+           backUp();
+           makeEqByTwoPoints_button.setStyle(activeStyleForButton);
+           whatDoing=1;
+           visiblePointA(true);
+           visiblePointB(true);
+       });
+       makeEqByPointVector_button.setOnAction(event -> {
+           backUp();
+           whatDoing=2;
+           makeEqByPointVector_button.setStyle(activeStyleForButton);
+           visiblePointA(true);
+           visibleVectorS(true);
+       });
+       findProjection_button.setOnAction(event -> {
+           backUp();
+           whatDoing=3;
+           findProjection_button.setStyle(activeStyleForButton);
+           visiblePointA(true);
+           visibleLine1(true);
+       });
+       findInersectionPoint_button.setOnAction(event -> {
+           backUp();
+           whatDoing=4;
+           findInersectionPoint_button.setStyle(activeStyleForButton);
+           visibleLine2(true);
+           visibleLine1(true);
+       });
+       findDistanseBetweenPointAndLine_button.setOnAction(event -> {
+           backUp();
+           whatDoing=5;
+           findDistanseBetweenPointAndLine_button.setStyle(activeStyleForButton);
+           visiblePointA(true);
+           visibleLine1(true);
+       });
+       makePerpendicularEq_button.setOnAction(event -> {
+           backUp();
+           whatDoing=6;
+           makePerpendicularEq_button.setStyle(activeStyleForButton);
+           visiblePointA(true);
+           visibleLine1(true);
+       });
+        solve_button.setOnAction(event ->
+        {       solution_label.setText("   ");
 
-
-        makeEqByTwoPoints_button.setOnAction(event ->{
-            backUp();
-            visiblePointA(true);
-            visiblePointB(true);
-            activeStyle(makeEqByTwoPoints_button);
-            whatDoing=1;
-
-        } );
-        makeEqByPointVector_button.setOnAction(event ->{
-            backUp();
-            visiblePointA(true);
-            visibleVectorS(true);
-            activeStyle(makeEqByPointVector_button);
-            whatDoing=2;
-        } );
-        findAngle_button.setOnAction(event ->{
-            backUp();
-            visibleLine1(true);
-            visibleLine2(true);
-            activeStyle(findAngle_button);
-            whatDoing=3;
-        } );
-        eqLineByIntersectionPlanes_button.setOnAction(event ->{
-            backUp();
-            visiblePlane1(true);
-            visiblePlane2(true);
-            activeStyle(eqLineByIntersectionPlanes_button);
-            whatDoing=4;
-        } );
-        isPerpendicular_button.setOnAction(event ->{
-            backUp();
-            visibleLine1(true);
-            visibleLine2(true);
-            activeStyle(isPerpendicular_button);
-            whatDoing=5;
-        } );
-        isParallel_button.setOnAction(event ->{
-            backUp();
-            visibleLine1(true);
-            visibleLine2(true);
-            activeStyle(isParallel_button);
-            whatDoing=6;
-        } );
-        solve_button.setOnAction(event ->{
-            if(whatDoing==1) {//рівняння прямої через дві точки
-
+            if(whatDoing==1) {
+                LinesAndPlane twoPoints = new LinesAndPlane(makeNumber(coordinatesPointA()),makeNumber(coordinatesPointB()));
+                solution_label.setText(twoPoints.makeEquationLineInSpaceByTwoPoints());
             }
-            if(whatDoing==2) {//рівняння прямої через точку і вектор
-
+            if(whatDoing==2) {
+                LinesAndPlane pointAndVector = new LinesAndPlane(makeNumber(coordinatesPointA()),makeNumber(coordinatesVectorS()));
+                solution_label.setText(pointAndVector.makeEquationLineInSpaceByPointAndVector());
             }
-            if(whatDoing==3) {//кут між прямими
-
+            if(whatDoing==3){
+                LinesAndPlane pointAndVectorLine = new LinesAndPlane(makeNumber(coordinatesPointA()),makeNumber(coordinatesVectorForLine1()));
+                solution_label.setText(pointAndVectorLine.findProjectionPointOnLine(makeNumber(coordinatesPointsForLine1())));
             }
-            if(whatDoing==4) {//рівняння перетину двох площин
-
+            if(whatDoing==4){
+                LinesAndPlane line1 = new LinesAndPlane(makeNumber(coordinatesPointsForLine1()),makeNumber(coordinatesVectorForLine1()));
+                LinesAndPlane line2 = new LinesAndPlane(makeNumber(coordinatesPointsForLine2()),makeNumber(coordinatesVectorForLine2()));
+                solution_label.setText(line1.findIntersectionPointBetweenTwoLinesInSpace(line2));
             }
-            if(whatDoing==5) {//чи є перпендикулярними
-
+            if(whatDoing==5) {
+                LinesAndPlane pointAndVectorLine = new LinesAndPlane(makeNumber(coordinatesPointA()),makeNumber(coordinatesVectorForLine1()));
+                solution_label.setText(pointAndVectorLine.findDistanceBetweenPointAndLineInSpace(makeNumber(coordinatesPointsForLine1())));
             }
-            if(whatDoing==6) {//чи є паралельними
-
+            if(whatDoing==6) {
+                LinesAndPlane pointAndVectorLine = new LinesAndPlane(makeNumber(coordinatesPointA()),makeNumber(coordinatesVectorForLine1()));
+                solution_label.setText(pointAndVectorLine.makeEquationPerpendicularLineToLineInSpace(makeNumber(coordinatesPointsForLine1())));
             }
+
         });
-
-
-
-
-
-
         back_button.setOnAction(event -> {
             back_button.getScene().getWindow().hide();
             openWindow("/sample/Menu/lineInSpaceMenu.fxml");
+
         });
         toMenu_button.setOnAction(event -> {
             toMenu_button.getScene().getWindow().hide();
             openWindow("/sample/Menu/Menu.fxml");
 
         });
+
+
     }
 
-    void backUp()
-    {
-        toStartStyle(makeEqByPointVector_button);
-        toStartStyle(makeEqByTwoPoints_button);
-        toStartStyle(isPerpendicular_button);
-        toStartStyle(isParallel_button);
-        toStartStyle(eqLineByIntersectionPlanes_button);
-        toStartStyle(findAngle_button);
 
-        visiblePlane1(false);
-        visiblePlane2(false);
-        visibleLine2(false);
+
+
+    void backUp()//все приховати і кнопки початкового стилю
+    {
         visibleLine1(false);
+        visibleLine2(false);
         visiblePointA(false);
         visiblePointB(false);
         visibleVectorS(false);
+
+        makeEqByPointVector_button.setStyle(startStyleForButton);
+        makeEqByTwoPoints_button.setStyle(startStyleForButton);
+        makePerpendicularEq_button.setStyle(startStyleForButton);
+        findDistanseBetweenPointAndLine_button.setStyle(startStyleForButton);
+        findInersectionPoint_button.setStyle(startStyleForButton);
+        findProjection_button.setStyle(startStyleForButton);
+
     }
 
-    void visiblePointA(boolean b)
-    {
-        visibleTextFields(coordinatesPointA(),b, 3);
-        pointA_label.setVisible(b);
-    }
-    void visiblePointB(boolean b)
-    {
-        visibleTextFields(coordinatesPointB(),b, 3);
-        pointB_label.setVisible(b);
-    }
-
-    void visibleVectorS(boolean b)
-    {
-        visibleTextFields(coordinatesVectorS(),b,3);
-        vector_label.setVisible(b);
-    }
-    void visiblePlane1(boolean b)
-    {
-        visibleTextFields(coefficients1(),b,4);
-        eq1_label.setVisible(b);
-    }
-    void visiblePlane2(boolean b)
-    {
-        visibleTextFields(coefficients2(),b,4);
-        eq2_label.setVisible(b);
-    }
-    void  visibleLine1(boolean b)
-    {
-        visibleTextFields(coefficients1(),b,4);
-        eq1Line_label.setVisible(b);
-    }
-    void  visibleLine2(boolean b)
-    {
-        visibleTextFields(coefficients2(),b,4);
-        eq2Line_label.setVisible(b);
+    void allTextFieldOnlyNumber() {
+        onlyNumber(coordinatesPointA());
+        onlyNumber(coordinatesPointB());
+        onlyNumber(coordinatesVectorS());
+        onlyNumber(coordinatesPointsForLine1());
+        onlyNumber(coordinatesPointsForLine2());
+        onlyNumber(coordinatesVectorForLine1());
+        onlyNumber(coordinatesVectorForLine2());
     }
 
 
-    double[] makeNumber(TextField[] coordinatesText, int n)
+    double[] makeNumber(TextField[] coordinatesText)
     {
-        String[] coordinatesStr = new String[n];
-        double[] coordinates = new double[n];
-        for(int i=0;i<n;i++)
+        String[] coordinatesStr = new String[3];
+        double[] coordinates = new double[3];
+        for(int i=0;i<3;i++)
         {
             coordinatesStr[i]=coordinatesText[i].getText();
             if(coordinatesStr[i]=="")
@@ -285,25 +282,38 @@ public class LineInSpacePractice {
         }
         return coordinates;
     }
-    void activeStyle(Button button)
-    {
-        String newStyleButton ="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-radius: 5 ";
-        button.setStyle(newStyleButton);
-    }
 
-    void toStartStyle(Button button)
-    {
-        String startStyle = "-fx-background-color: #ffffff; -fx-border-color:  #FB6B90; -fx-border-radius: 5 ";
-        button.setStyle(startStyle);
-    }
-
-    void visibleTextFields(TextField[] text,boolean b, int n)
-    {
-        for(int i=0;i<n;i++)
+    void visibleTextFields(TextField[] text,boolean b) {
+        for(int i=0;i<3;i++)
             text[i].setVisible(b);
     }
-    TextField[] coordinatesPointA()
-    {
+
+    void visibleLine1(boolean b) {
+        visibleTextFields(coordinatesVectorForLine1(),b);
+        visibleTextFields(coordinatesPointsForLine1(),b);
+        eq1Line_label.setVisible(b);
+        eqLine1Img.setVisible(b);
+    }
+    void visibleLine2(boolean b) {
+        visibleTextFields(coordinatesVectorForLine2(),b);
+        visibleTextFields(coordinatesPointsForLine2(),b);
+        eq2Line_label.setVisible(b);
+        eqLine2Img.setVisible(b);
+    }
+    void visibleVectorS(boolean b) {
+        vector_label.setVisible(b);
+        visibleTextFields(coordinatesVectorS(),b);
+    }
+    void visiblePointA(boolean b) {
+        visibleTextFields(coordinatesPointA(),b);
+        pointA_label.setVisible(b);
+    }
+    void visiblePointB(boolean b){
+        visibleTextFields(coordinatesPointB(),b);
+        pointB_label.setVisible(b);
+    }
+
+    TextField[] coordinatesPointA() {
         TextField[] pointA = {xA_text,yA_text,zA_text};
         return pointA;
     }
@@ -314,18 +324,28 @@ public class LineInSpacePractice {
     }
     TextField[] coordinatesVectorS()
     {
-        TextField[] vector = {xn_text,yn_text,zn_text};
-        return vector;
+        TextField[] VectorS = {lVectorS_text,mVectorS_text,pVectorS_text};
+        return VectorS;
     }
-    TextField[] coefficients1()
+    TextField[] coordinatesPointsForLine1()
     {
-        TextField[] coef1={сoefA1_text,сoefB1_text,сoefC1_text, сoefD1_text} ;
-        return coef1;
+        TextField[] line1 = {x0Line1text,y0Line1text,z0Line1text};
+        return line1;
     }
-    TextField[] coefficients2()
+    TextField[] coordinatesPointsForLine2()
     {
-        TextField[] coef2={сoefA2_text,сoefB2_text,сoefC2_text, сoefD2_text} ;
-        return coef2;
+        TextField[] line1 = {x0Line2text,y0Line2text,z0Line2text};
+        return line1;
+    }
+    TextField[] coordinatesVectorForLine1()
+    {
+        TextField[] line1 = {lLine1_text,mLine1_text,pLine1_text};
+        return line1;
+    }
+    TextField[] coordinatesVectorForLine2()
+    {
+        TextField[] line1 = {lLine2_text,mLine2_text,pLine2_text};
+        return line1;
     }
 
 
@@ -345,5 +365,29 @@ public class LineInSpacePractice {
         stage.setTitle("Інтерактивний освітній ресурс до розділу алгера та аналітична геометрія");
         stage.show();
     }
+
+
+
+    void onlyNumber(TextField[] coordinates) {
+        for(int j=0;j<3;j++) {
+            int b=j;
+            coordinates[j].textProperty().addListener(new ChangeListener<String>() {
+                @Override
+                public void changed(ObservableValue<? extends String> observable, String oldValue,
+                                    String newValue) {
+                    if (!newValue.matches("-?\\d*|-?\\d*\\.\\d*")) {
+                        newValue = newValue.replaceFirst("\\.", "₊");
+                        newValue = newValue.replaceFirst("-", "³");
+                        newValue = newValue.replaceAll("[^\\d₊³]", "");
+                        newValue = newValue.replaceFirst("₊", "\\.");
+                        newValue = newValue.replaceFirst("³", "-");
+
+                        coordinates[b].setText(newValue);
+                    }
+                }
+            });
+        }
+    }
+
 
 }

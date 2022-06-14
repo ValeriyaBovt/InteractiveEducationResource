@@ -30,13 +30,15 @@ public class CustomVector {
         double[] b = otherVector.vector;
         double[] vectorProduct = vectorProductDouble(otherVector);
         String result="";
-        String line1 ="                i⃑    j⃑   k⃑      "+"    i⃑     j⃑    k⃑  \n";
-        String line2 ="(a⃑×b⃑)= |xa⃑ ya⃑ za⃑| = "+"|"+a[0]+" "+a[1]+" "+a[2]+"| =\n";
-        String line3 ="             |xb⃑ yb⃑ zb⃑|     |"+b[0]+" "+b[1]+" "+b[2]+"|\n";
-        String line4 =  "= i⃑("+a[1]+"∙"+b[2]+"-"+a[2]+"∙"+b[1]+
-            ") - j⃑("+a[0]+"∙"+b[2]+"-"+a[2]+"∙"+b[0]+") + k⃑("+a[0]+"∙"+b[1]+"-"+a[1]+"∙"+b[0]+") = \n";
-        String line5="= i⃑∙("+vectorProduct[0]+") - j⃑∙("+vectorProduct[1]*(-1)+") + k⃑∙("+vectorProduct[2]+") = {"+vectorProduct[0]+" ; " +
-                vectorProduct[1]+" ; "+vectorProduct[2]+"}";
+        String line1 ="                i⃑    j⃑   k⃑      "+"    i⃑          j⃑         k⃑  \n";
+        String line2 ="(a⃑×b⃑)= |xa⃑ ya⃑ za⃑| = "+"|"+String.format("%.3f",a[0])+" "+String.format("%.3f",a[1])+" "+String.format("%.3f",a[2])+"| =\n";
+        String line3 ="             |xb⃑ yb⃑ zb⃑|     |"+String.format("%.3f",b[0])+" "+String.format("%.3f",b[1])+" "+String.format("%.3f",b[2])+"|\n";
+        String line4 =  "= i⃑("+String.format("%.3f",a[1])+"∙"+String.format("%.3f",b[2])+"-"+String.format("%.3f",a[2])+"∙"+String.format("%.3f",b[1])+
+            ") - j⃑("+String.format("%.3f",a[0])+"∙"+String.format("%.3f",b[2])+"-"+String.format("%.3f",a[2])
+                +"∙"+String.format("%.3f",b[0])+") + k⃑("+String.format("%.3f",a[0])+"∙"+String.format("%.3f",b[1])
+                +"-"+String.format("%.3f",a[1])+"∙"+String.format("%.3f",b[0])+") = \n";
+        String line5="= i⃑∙("+String.format("%.3f",vectorProduct[0])+") - j⃑∙("+String.format("%.3f",vectorProduct[1]*(-1))+") + k⃑∙("+String.format("%.3f",vectorProduct[2])+") = {"
+                +String.format("%.3f",vectorProduct[0])+" ; " + String.format("%.3f",vectorProduct[1])+" ; "+String.format("%.3f",vectorProduct[2])+"}";
         return line1+line2+line3+line4+line5;
     }
     public double[] vectorProductDouble(CustomVector otherVector)
